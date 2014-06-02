@@ -1,6 +1,4 @@
 # bounding_box Function
-## Tyler Rinker
-### June 02, 2014
 
 This is an R implementation of Jan Philip Matuschek's [bounding box article](http://janmatuschek.de/LatitudeLongitudeBoundingCoordinates) *Finding Points Within a Distance of a Latitude/Longitude Using Bounding Coordinates*.
 
