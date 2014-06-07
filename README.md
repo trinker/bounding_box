@@ -11,7 +11,8 @@ This is an R implementation of Jan Philip Matuschek's bounding box article: [*Fi
 #' @param lat The latitude of the center point.
 #' @param lon The longitude of the center point.
 #' @param dist The distance from the center point.  
-#' @param in.miles logical.  If \code{TRUE} uses miles as the units of \code{dist}.  If \code{FALSE} uses kilometers.
+#' @param in.miles logical.  If \code{TRUE} uses miles as the units of 
+#' \code{dist}.  If \code{FALSE} uses kilometers.
 #' @return Returns a matrix with max/min latitude/longitude values.
 #' @references \url{http://janmatuschek.de/LatitudeLongitudeBoundingCoordinates}
 #' @keywords bounding_box, coordinates
@@ -77,7 +78,9 @@ ggmap(mapImageData,
     ylab = "Latitude",
     xlab = "Longitude") + 
 	geom_rect(aes(xmin = bb[1, 1], xmax = bb[1, 2], ymin = bb[2, 1], 
- 		ymax = bb[2, 2]), color="red", fill=NA, size=2) 
+ 		ymax = bb[2, 2]), color="red", fill=NA, size=2) +
+	geom_point(data=data.frame(lon = -0.016179, lat = 51.538525), size=7, 
+		color="yellow")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
